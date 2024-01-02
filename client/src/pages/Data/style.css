@@ -1,0 +1,59 @@
+.custom-button {
+    padding: 10px 20px;
+    border: none;
+    margin: 30px ;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none; 
+  }
+  
+  .custom-button:hover {
+    background-color: #0056b3;
+  }
+  .custom-button:link,
+  .custom-button:visited {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .custom-button:active {
+    background-color: #004080;
+  }
+  .h2{
+    text-align: center;
+    color: #fff;
+  }
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 80%;
+  margin: 0 auto; 
+  border: 1px solid #ddd; 
+  border-radius: 4px; 
+  overflow: hidden; 
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid #ddd; 
+  padding: 12px;
+  text-align: center;
+  word-wrap: break-word; 
+}
+
+.table td {
+  color: #fff; 
+}
+
+.table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+
+
+
+

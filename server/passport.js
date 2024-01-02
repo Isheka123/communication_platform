@@ -10,8 +10,6 @@ passport.use(
             scope: ["profile", "email"],
         },
         function (accessToken, refreshToken, profile, callback) {
-            // In a real scenario, you'd handle the user information here
-            // For simplicity, directly passing the profile as user
             callback(null, profile);
         }
     )

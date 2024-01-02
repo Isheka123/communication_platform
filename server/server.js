@@ -154,7 +154,7 @@ app.post("/send-email", async (req, res) => {
     console.log(istDate);
     const date1 = new Date(istDate);
 
-    // Convert to MySQL-compatible format
+    
     const mysqlFormattedDate = date1
       .toISOString()
       .slice(0, 19)
@@ -193,20 +193,40 @@ app.post("/send-email", async (req, res) => {
 
 app.get("/emails", async (req, res) => {
   try {
-    const query = "SELECT * FROM customer"; // Fetch all records from the customer table
+    const query = "SELECT * FROM customer";
     connection.query(query, (error, results) => {
       if (error) {
         console.error("Error fetching data:", error);
         res.status(500).json({ error: "Error fetching data" });
         return;
       }
-      res.status(200).json(results); // Sending fetched data as JSON response
+      res.status(200).json(results); 
     });
   } catch (error) {
     console.error("Error fetching data:", error);
     res.status(500).json({ error: "Error fetching data" });
   }
 });
+
+app.get("/receivedEmails", async (req, res) => {
+  try {
+    const query = "SELECT * FROM received"; 
+    connection.query(query, (error, results) => {
+      if (error) {
+        console.error("Error fetching received emails:", error);
+        res.status(500).json({ error: "Error fetching received emails" });
+        return;
+      }
+      res.status(200).json(results);
+    });
+  } catch (error) {
+    console.error("Error fetching received emails:", error);
+    res.status(500).json({ error: "Error fetching received emails" });
+  }
+});
+
+
+
 
 app.use("/auth", authRoute);
 

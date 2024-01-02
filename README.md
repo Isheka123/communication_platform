@@ -45,8 +45,15 @@ To start the development server and run the application, use the following comma
      npm start
 
 ```
+To start receiving emails
 
-Client application will be available at http://localhost:3000 and server application will be available at http://localhost:8000 in your web browser.
+```bash
+
+     nodemon webhook.js
+
+```
+
+Client application will be available at http://localhost:3000 and server application will be available at http://localhost:8000 in your web browser. To receive emails first install ngrok in your computer then webhook.js in another port(eg:8001) also parallely run run this command ngrok http 8001 in command prompt.Update in the settings of inbound settings- webhook URI.
 
 The Client application looks like this
 <div align="center">
@@ -62,12 +69,6 @@ This Communication Platform allows you to:
 
 - Sending and Receive Emails.
 - View the communication history.
-
-
-## Built With
-
-- React - A JavaScript library for building user interfaces.
-- Firebase - A cloud-based platform for building web applications.
 
 ## Contributing
 

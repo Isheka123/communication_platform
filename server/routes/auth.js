@@ -1,6 +1,5 @@
 const router = require("express").Router();
-const passport = require("passport"); // Import your passport configuration file
-
+const passport = require("passport"); 
 router.get("/login/success", (req, res) => {
     if (req.user) {
         res.status(200).json({
@@ -20,7 +19,7 @@ router.get("/login/failed", (req, res) => {
     });
 });
 
-router.get("/google", passport.authenticate("google", ["profile", "email"]));
+router.get("/google", passport.authenticate("google", ["email"]));
 
 router.get(
     "/google/callback",

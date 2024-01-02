@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const mysql = require('mysql'); // Import MySQL module
+const mysql = require('mysql'); 
 
 const app = express();
 const PORT = 8001;

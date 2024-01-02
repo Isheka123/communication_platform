@@ -51,7 +51,7 @@ Client application will be available at http://localhost:3000 and server applica
 The Client application looks like this
 <div align="center">
 
-   <img src="/public/login.png"/>
+   <img src="../public/login.png"/>
 
 </div>
 

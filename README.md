@@ -27,6 +27,11 @@ Make sure you have Node.js and npm installed on your computer.
    cd communication_platform
 
 ```
+```bash
+
+   cd client and cd server
+
+```
 
 3. Install the project dependencies Seperately for Client and Server.
 
@@ -52,6 +57,11 @@ To start receiving emails
      nodemon webhook.js
 
 ```
+give all the required api tokens CLIENT_ID , CLIENT_SECRET from google developer console and also give client url to run backend properly.
+CLIENT_URL = 'http://localhost:3000' 
+POSTMARK_SERVER_TOKEN , POSTMARK_TOKEN give this tokens to send emails using postmarkapp 
+On frontend give backend url REACT_APP_API_URL = http://localhost:8000
+Create .env file and give all urls.
 
 Client application will be available at http://localhost:3000 and server application will be available at http://localhost:8000 in your web browser. To receive emails first install ngrok in your computer then webhook.js in another port(eg:8001) also parallely run run this command ngrok http 8001 in command prompt.Update in the settings of inbound settings- webhook URI.
 
@@ -62,7 +72,7 @@ The Client application looks like this
 
 </div>
 
-
+for sending emails from another domain is not accept now . I have sent an request to approve my account if account is approved then any domain can send emails.
 ## Features
 
 This Communication Platform allows you to:
